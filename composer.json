@@ -1,0 +1,24 @@
+{
+  "name": "pccomponentes/coding-standard",
+  "description": "PcComponentes Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
+  "authors": [
+    {
+      "name": "Zoilo Mora Fernández",
+      "email": "zoilo.mora@pccomponentes.com"
+    }
+  ],
+  "license": "MIT",
+  "type": "library",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "PccomponentesCodingStandard\\": "PccomponentesCodingStandard/"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "slevomat/coding-standard": "^4.8",
+    "squizlabs/php_codesniffer": "^3.4"
+  }
+}
