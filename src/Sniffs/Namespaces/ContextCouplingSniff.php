@@ -1,9 +1,16 @@
 <?php
+declare(strict_types=1);
 
-namespace PccomponentesCodingStandard\Sniffs\Namespaces;
+namespace PcComponentesCodingStandard\Sniffs\Namespaces;
 
 use PHP_CodeSniffer\Sniffs\Sniff;
 use PHP_CodeSniffer\Files\File;
+use function count;
+use function explode;
+use function strpos;
+use const T_NAMESPACE;
+use const T_STRING;
+use const T_USE;
 
 final class ContextCouplingSniff implements Sniff
 {
@@ -24,19 +31,19 @@ final class ContextCouplingSniff implements Sniff
     }
 
     /**
-     * @param File $file
-     * @param int $position
+     * @param File $phpcsFile
+     * @param int $stackPtr
      * @return void
      */
-    public function process(File $file, $position)
+    public function process(File $phpcsFile, $stackPtr)
     {
-        $tokens = $file->getTokens();
+        $tokens = $phpcsFile->getTokens();
 
-        $startNamespace = $file->findNext(
+        $startNamespace = $phpcsFile->findNext(
             [T_STRING],
-            $file->findStartOfStatement($position)
+            $phpcsFile->findStartOfStatement($stackPtr)
         );
-        $endPosition = $file->findEndOfStatement($startNamespace);
+        $endPosition = $phpcsFile->findEndOfStatement($startNamespace);
 
         $namespace = '';
         for ($i = $startNamespace; $i < $endPosition; $i++) {
@@ -57,13 +64,13 @@ final class ContextCouplingSniff implements Sniff
         }
 
         $uses = [];
-        while (false !== $file->findNext([T_USE], $endPosition)) {
-            $startPosition = $file->findNext(
+        while (false !== $phpcsFile->findNext([T_USE], $endPosition)) {
+            $startPosition = $phpcsFile->findNext(
                 [T_STRING],
-                $file->findNext([T_USE], $endPosition)
+                $phpcsFile->findNext([T_USE], $endPosition)
             );
 
-            $endPosition = $file->findEndOfStatement($startPosition);
+            $endPosition = $phpcsFile->findEndOfStatement($startPosition);
 
             $value = '';
             for ($i = $startPosition; $i < $endPosition; $i++) {
@@ -94,7 +101,7 @@ final class ContextCouplingSniff implements Sniff
 
             if (false === $found) {
                 $error = 'The coupling between contexts is not allowed';
-                $file->addError($error, $use['stack_ptr'], 'BlankLineAfter');
+                $phpcsFile->addError($error, $use['stack_ptr'], 'BlankLineAfter');
             }
         }
     }
