@@ -18,3 +18,9 @@ function test()
         ''
     );
 }
+
+try {
+    strval(1);
+} catch (Throwable $exception) {
+    echo $exception->getMessage();
+}

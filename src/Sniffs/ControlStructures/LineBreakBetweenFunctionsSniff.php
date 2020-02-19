@@ -7,10 +7,20 @@ use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Fixer;
 use PHP_CodeSniffer\Sniffs\Sniff;
 use SlevomatCodingStandard\Helpers\TokenHelper;
+use function in_array;
+use function sprintf;
+use const T_CATCH;
+use const T_COMMA;
+use const T_CLOSE_CURLY_BRACKET;
 
 final class LineBreakBetweenFunctionsSniff implements Sniff
 {
     public const CODE_LINE_BREAK_BETWEEN_FUNCTION = 'LineBreakBetweenFunctions';
+
+    private const CODE_EXCEPTIONS = [
+        T_COMMA,
+        T_CATCH,
+    ];
 
     /**
      * @return array
@@ -39,7 +49,7 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
 
         $next = $tokens[$nextPointer];
 
-        if ($next['code'] === T_COMMA && $next['line'] === $line) {
+        if (true === in_array($next['code'], self::CODE_EXCEPTIONS)) {
             return;
         }
 
