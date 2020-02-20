@@ -5,6 +5,7 @@
         <exclude name="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
         <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses" />
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName" />
@@ -18,6 +19,9 @@
         <exclude name="SlevomatCodingStandard.Namespaces.UseOnlyWhitelistedNamespaces" />
         <exclude name="SlevomatCodingStandard.Operators.DisallowIncrementAndDecrementOperators" />
         <exclude name="SlevomatCodingStandard.TypeHints.LongTypeHints" />
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint" />
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
     </rule>
     <rule ref="Generic.Files.LineLength">
         <properties>
