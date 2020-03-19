@@ -24,3 +24,9 @@ try {
 } catch (Throwable $exception) {
     echo $exception->getMessage();
 }
+
+if (true) {
+    echo 'ok';
+} else {
+    echo 'ko';
+}
