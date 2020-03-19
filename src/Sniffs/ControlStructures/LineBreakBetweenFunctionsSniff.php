@@ -20,6 +20,7 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
     private const CODE_EXCEPTIONS = [
         T_COMMA,
         T_CATCH,
+        T_ELSE,
     ];
 
     /**
