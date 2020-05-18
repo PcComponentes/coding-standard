@@ -69,7 +69,7 @@
                 <element value="constants"/>
                 <element value="properties"/>
                 <element value="constructor"/>
-                <element value="all public methods, magic methods"/>
+                <element value="all public methods, static methods, magic methods"/>
                 <element value="methods"/>
             </property>
         </properties>
