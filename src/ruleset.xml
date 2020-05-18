@@ -67,7 +67,7 @@
                 <element value="uses"/>
                 <element value="public constants"/>
                 <element value="constants"/>
-                <element value="public properties, protected properties, private properties"/>
+                <element value="properties"/>
                 <element value="constructor"/>
                 <element value="all public methods, magic methods"/>
                 <element value="methods"/>
