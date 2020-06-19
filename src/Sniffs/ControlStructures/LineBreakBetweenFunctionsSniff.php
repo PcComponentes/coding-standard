@@ -48,7 +48,13 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
             return;
         }
 
+        $previousLinePointer = TokenHelper::findPrevious($phpcsFile, T_DOC_COMMENT_OPEN_TAG, $nextPointer);
+
         $next = $tokens[$nextPointer];
+        $previous = null;
+        if (null !== $previousLinePointer) {
+            $previous = $tokens[$previousLinePointer];
+        }
 
         if (true === in_array($next['code'], self::CODE_EXCEPTIONS)) {
             return;
@@ -59,6 +65,10 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
         }
 
         if ($next['code'] === T_CLOSE_CURLY_BRACKET && $next['line'] === ($line + 1)) {
+            return;
+        }
+
+        if (null !== $previous && T_DOC_COMMENT_OPEN_TAG === $previous['code'] && $previous['line'] === ($line + 2)) {
             return;
         }
 
