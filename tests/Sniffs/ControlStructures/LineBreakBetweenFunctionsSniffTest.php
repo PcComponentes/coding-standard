@@ -22,4 +22,10 @@ class LineBreakBetweenFunctionsSniffTest extends TestCase
 
         self::assertAllFixedInFile($report);
     }
+
+    public function testLineBreakBeforeComment(): void
+    {
+        $report = self::checkFile(__DIR__ . '/data/lineBreakBeforeComment.php');
+        self::assertNoSniffErrorInFile($report);
+    }
 }
