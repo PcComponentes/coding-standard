@@ -24,6 +24,7 @@
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint" />
         <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
+        <exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations" />
     </rule>
     <rule ref="Generic.Files.LineLength">
         <properties>
