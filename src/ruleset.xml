@@ -10,6 +10,7 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses" />
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction" />
+        <exclude name="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall" />
         <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
         <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword" />
