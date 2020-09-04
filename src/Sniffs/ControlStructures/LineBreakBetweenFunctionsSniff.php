@@ -72,6 +72,10 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
             return;
         }
 
+        if (T_SEMICOLON === ($next['code'] ?? null) && T_CLOSE_CURLY_BRACKET === ($tokens[$nextPointer+2]['code'] ?? null)) {
+            return;
+        }
+
         $fix = $phpcsFile->addFixableError(
             sprintf('There must be exactly %d line break after a function.', 1),
             $stackPtr,
