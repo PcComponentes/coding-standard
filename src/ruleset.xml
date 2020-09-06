@@ -32,6 +32,11 @@
             <property name="lineLimit" value="180"/>
         </properties>
     </rule>
+    <rule ref="SlevomatCodingStandard.Files.LineLength">
+        <properties>
+            <property name="lineLengthLimit" value="180"/>
+        </properties>
+    </rule>
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
             <property name="forbiddenFunctions" type="array" value="array=>null,var_dump=>null,dump=>null" />
