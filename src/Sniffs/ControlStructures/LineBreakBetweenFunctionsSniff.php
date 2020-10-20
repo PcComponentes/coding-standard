@@ -12,6 +12,7 @@ use function sprintf;
 use const T_CATCH;
 use const T_COMMA;
 use const T_CLOSE_CURLY_BRACKET;
+use const T_WHILE;
 
 final class LineBreakBetweenFunctionsSniff implements Sniff
 {
@@ -21,6 +22,7 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
         T_COMMA,
         T_CATCH,
         T_ELSE,
+        T_WHILE,
     ];
 
     /**
