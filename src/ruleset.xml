@@ -13,7 +13,6 @@
         <exclude name="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall" />
         <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
         <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
-        <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameAfterKeyword" />
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedClassNameInAnnotation" />
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions" />
         <exclude name="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions" />
@@ -30,6 +29,11 @@
     <rule ref="Generic.Files.LineLength">
         <properties>
             <property name="lineLimit" value="180"/>
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="linesCountBeforeDeclare" value="0"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Files.LineLength">
