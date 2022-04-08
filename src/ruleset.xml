@@ -33,7 +33,7 @@
     </rule>
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
-            <property name="declareOnFirstLine"/>
+            <property name="linesCountBeforeDeclare" value="0"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Files.LineLength">
