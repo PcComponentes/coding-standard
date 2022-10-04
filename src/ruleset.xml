@@ -6,13 +6,16 @@
         <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
         <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition" />
+        <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator.DisallowedNullSafeObjectOperator" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses" />
+        <exclude name="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch.DisallowedNonCapturingCatch" />
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration" />
+        <exclude name="SlevomatCodingStandard.Functions.FunctionLength.FunctionLength" />
         <exclude name="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall" />
         <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
         <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
