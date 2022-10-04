@@ -11,6 +11,7 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison" />
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses" />
         <exclude name="SlevomatCodingStandard.Exceptions.DisallowNonCapturingCatch.DisallowedNonCapturingCatch" />
+        <exclude name="SlevomatCodingStandard.Files.FunctionLength.FunctionLength" />
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall" />
