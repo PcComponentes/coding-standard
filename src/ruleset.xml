@@ -3,6 +3,7 @@
     <rule ref="PSR2" />
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml">
         <exclude name="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
+        <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
         <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowShortTernaryOperator" />
@@ -10,6 +11,8 @@
         <exclude name="SlevomatCodingStandard.ControlStructures.NewWithoutParentheses" />
         <exclude name="SlevomatCodingStandard.Files.TypeNameMatchesFileName" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration" />
         <exclude name="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall" />
         <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
         <exclude name="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
