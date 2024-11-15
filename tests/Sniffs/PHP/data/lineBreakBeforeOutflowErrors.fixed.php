@@ -60,3 +60,9 @@ switch (true) {
 
         return 'default';
 }
+
+match ('hello') {
+    'hello' => 'bye',
+    'bye' => 'hello',
+    default => throw new \Exception('hello'),
+};

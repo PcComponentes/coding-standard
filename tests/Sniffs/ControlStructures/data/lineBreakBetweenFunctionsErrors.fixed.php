@@ -34,5 +34,5 @@ if (true) {
 match ('hello') {
     'hello' => 'bye',
     'bye' => 'hello',
-    default => null,
+    default => throw new \Exception('hello'),
 };
