@@ -24,6 +24,7 @@ final class LineBreakBeforeOutflowSniff implements Sniff
     private const LINE_BREAKS_EXCEPTIONS = [
         T_OPEN_CURLY_BRACKET => 1,
         T_COLON => 1,
+        T_MATCH_ARROW => 0,
     ];
 
     /**
@@ -92,8 +93,7 @@ final class LineBreakBeforeOutflowSniff implements Sniff
     {
         return true === array_key_exists($code, self::LINE_BREAKS_EXCEPTIONS)
             ? self::LINE_BREAKS_EXCEPTIONS[$code]
-            : self::DEFAULT_LINE_BREAKS
-        ;
+            : self::DEFAULT_LINE_BREAKS;
     }
 
     private function numberOfLineBreaks(array $tokens, int $start, int $finish): int

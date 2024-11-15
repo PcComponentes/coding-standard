@@ -60,3 +60,9 @@ switch (true) {
         \strval($item);
         return 'default';
 }
+
+match ('hello') {
+    'hello' => 'bye',
+    'bye' => 'hello',
+    default => throw new \Exception('hello'),
+};
