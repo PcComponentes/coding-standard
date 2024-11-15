@@ -10,8 +10,8 @@ use SlevomatCodingStandard\Helpers\TokenHelper;
 use function in_array;
 use function sprintf;
 use const T_CATCH;
-use const T_COMMA;
 use const T_CLOSE_CURLY_BRACKET;
+use const T_COMMA;
 use const T_WHILE;
 
 final class LineBreakBetweenFunctionsSniff implements Sniff
@@ -43,7 +43,8 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
     public function process(File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
-        $line = $tokens[$stackPtr]['line'];
+        $current = $tokens[$stackPtr];
+        $line = $current['line'];
 
         $nextPointer = TokenHelper::findNextEffective($phpcsFile, $stackPtr + 1);
         if (null === $nextPointer) {
@@ -62,11 +63,11 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
             return;
         }
 
-        if ($next['code'] !== T_CLOSE_CURLY_BRACKET && $next['line'] === ($line + 2)) {
+        if (false === in_array($next['code'], [T_CLOSE_CURLY_BRACKET, T_SEMICOLON]) && $next['line'] === ($line + 2)) {
             return;
         }
 
-        if ($next['code'] === T_CLOSE_CURLY_BRACKET && $next['line'] === ($line + 1)) {
+        if (T_CLOSE_CURLY_BRACKET === $next['code'] && $next['line'] === ($line + 1)) {
             return;
         }
 
@@ -74,7 +75,11 @@ final class LineBreakBetweenFunctionsSniff implements Sniff
             return;
         }
 
-        if (T_SEMICOLON === ($next['code'] ?? null) && T_CLOSE_CURLY_BRACKET === ($tokens[$nextPointer+2]['code'] ?? null)) {
+        if (T_SEMICOLON === ($next['code'] ?? null) && T_CLOSE_CURLY_BRACKET === ($tokens[$nextPointer + 2]['code'] ?? null)) {
+            return;
+        }
+
+        if (T_SEMICOLON === $next['code'] && T_CLOSE_CURLY_BRACKET === $current['code']) {
             return;
         }
 
