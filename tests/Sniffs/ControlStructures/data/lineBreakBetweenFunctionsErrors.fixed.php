@@ -30,3 +30,9 @@ if (true) {
 } else {
     echo 'ko';
 }
+
+match ('hello') {
+    'hello' => 'bye',
+    'bye' => 'hello',
+    default => null,
+};
