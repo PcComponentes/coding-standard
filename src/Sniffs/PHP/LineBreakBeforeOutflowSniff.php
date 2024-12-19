@@ -89,7 +89,7 @@ final class LineBreakBeforeOutflowSniff implements Sniff
         $phpcsFile->fixer->endChangeset();
     }
 
-    private function getLineBreaksRequired(string $code): int
+    private function getLineBreaksRequired(string|int $code): int
     {
         return true === array_key_exists($code, self::LINE_BREAKS_EXCEPTIONS)
             ? self::LINE_BREAKS_EXCEPTIONS[$code]
