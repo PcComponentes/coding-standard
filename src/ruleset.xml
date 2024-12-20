@@ -3,10 +3,12 @@
     <rule ref="PSR2" />
     <rule ref="vendor/slevomat/coding-standard/SlevomatCodingStandard/ruleset.xml">
         <exclude name="SlevomatCodingStandard.Arrays.AlphabeticallySortedByKeys.IncorrectKeyOrder" />
+        <exclude name="SlevomatCodingStandard.Attributes.AttributesOrder" />
         <exclude name="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
         <exclude name="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong" />
         <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
+        <exclude name="SlevomatCodingStandard.Commenting.DisallowCommentAfterCode" />
         <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh" />
         <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator.DisallowedNullSafeObjectOperator" />
