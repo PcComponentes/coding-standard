@@ -23,6 +23,7 @@
         <exclude name="SlevomatCodingStandard.Functions.DisallowNamedArguments.DisallowedNamedArgument" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInCall" />
         <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInDeclaration" />
+        <exclude name="SlevomatCodingStandard.Functions.DisallowTrailingCommaInClosureUse" />
         <exclude name="SlevomatCodingStandard.Functions.FunctionLength.FunctionLength" />
         <exclude name="SlevomatCodingStandard.Functions.RequireSingleLineCall.RequiredSingleLineCall" />
         <exclude name="SlevomatCodingStandard.Functions.UnusedParameter" />
