@@ -7,6 +7,7 @@
         <exclude name="SlevomatCodingStandard.Classes.ClassConstantVisibility" />
         <exclude name="SlevomatCodingStandard.Classes.ClassLength.ClassTooLong" />
         <exclude name="SlevomatCodingStandard.Classes.DisallowConstructorPropertyPromotion" />
+        <exclude name="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
         <exclude name="SlevomatCodingStandard.Commenting.DisallowCommentAfterCode" />
         <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh" />
@@ -102,4 +103,6 @@
             </property>
         </properties>
     </rule>
+    <!-- Custom rules -->
+    <rule ref="./Sniffs/Classes/RequireSingleLineMethodSignatureExceptWithAttributesSniff.php"/>
 </ruleset>
