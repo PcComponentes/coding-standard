@@ -42,6 +42,7 @@
         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint" />
         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint" />
         <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint" />
+        <exclude name="SlevomatCodingStandard.TypeHints.UnionTypeHintFormat" />
         <exclude name="PSR2.Namespaces.UseDeclaration.MultipleDeclarations" />
     </rule>
     <rule ref="Generic.Files.LineLength">
@@ -52,6 +53,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="linesCountBeforeDeclare" value="0"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.Files.LineLength">
@@ -61,15 +63,14 @@
     </rule>
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
-            <property name="forbiddenFunctions" type="array" value="array=>null,var_dump=>null,dump=>null" />
+            <property name="forbiddenFunctions" type="array">
+                <element key="array" value="null" />
+                <element key="var_dump" value="null" />
+                <element key="dump" value="null" />
+            </property>
         </properties>
     </rule>
     <rule ref="SlevomatCodingStandard.ControlStructures.RequireYodaComparison" />
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
-        <properties>
-            <property name="spacesCountAroundEqualsSign" value="0"/>
-        </properties>
-    </rule>
     <rule ref="SlevomatCodingStandard.Classes.TraitUseSpacing">
         <properties>
             <property name="linesCountBeforeFirstUse" value="0"/>
