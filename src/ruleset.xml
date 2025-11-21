@@ -10,6 +10,7 @@
         <exclude name="SlevomatCodingStandard.Classes.RequireSingleLineMethodSignature" />
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming" />
         <exclude name="SlevomatCodingStandard.Commenting.DisallowCommentAfterCode" />
+        <exclude name="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment" />
         <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh" />
         <exclude name="SlevomatCodingStandard.ControlStructures.AssignmentInCondition" />
         <exclude name="SlevomatCodingStandard.ControlStructures.DisallowNullSafeObjectOperator.DisallowedNullSafeObjectOperator" />
