@@ -34,4 +34,10 @@ class LineBreakBetweenFunctionsSniffTest extends TestCase
         $report = self::checkFile(__DIR__ . '/data/lineBreakBeforeReturnFunction.php');
         self::assertNoSniffErrorInFile($report);
     }
+
+    public function testLineBreakBeforeFinally(): void
+    {
+        $report = self::checkFile(__DIR__ . '/data/lineBreakBeforeFinally.php');
+        self::assertNoSniffErrorInFile($report);
+    }
 }
